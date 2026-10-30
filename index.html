@@ -188,42 +188,45 @@ header nav {
     font-size: 24px;
     cursor: pointer;
 }     
- @media (max-width: 700px) {
+/* Mobile navigation and hero layout */
+@media (max-width: 700px) {
     header {
         padding: 16px 6%;
     }
-nav .logo {
+
+    nav .logo {
         font-size: 20px;
         white-space: nowrap;
     }
+
     header nav {
-    flex-wrap: wrap;
-    gap: 12px;
-}
+        flex-wrap: wrap;
+        gap: 12px;
+    }
 
-.menu-toggle {
-    display: block;
-}
+    .menu-toggle {
+        display: block;
+    }
 
-#nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-    width: 100%;
-    padding-top: 10px;
-}
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        padding-top: 10px;
+    }
 
-#nav-links.open {
-    display: flex;
-}
+    #nav-links.open {
+        display: flex;
+    }
 
-#nav-links a {
-    display: block;
-    padding: 12px 0;
-    font-size: 15px;
-    border-top: 1px solid #292929;
-}
+    #nav-links a {
+        display: block;
+        padding: 12px 0;
+        font-size: 15px;
+        border-top: 1px solid #292929;
+    }
 
     .hero {
         flex-direction: column;
@@ -238,9 +241,16 @@ nav .logo {
     h1 {
         font-size: 36px;
     }
+}
 
-  #services {
+/* Services section */
+#services {
     padding: 60px 8%;
+}
+
+#services h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
 }
 
 .service-list {
@@ -266,22 +276,32 @@ nav .logo {
     color: #3b82f6;
 }
 
+/* Tablet layout */
 @media (max-width: 900px) {
     .service-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
+/* Phone layout */
 @media (max-width: 700px) {
-    #services {
+    #services,
+    #contact {
         padding: 45px 6%;
+    }
+
+    #services h2,
+    #contact h2 {
+        font-size: 30px;
     }
 
     .service-list {
         grid-template-columns: 1fr;
     }
 }
-   #contact {
+
+/* Contact section */
+#contact {
     padding: 60px 8%;
     text-align: center;
     background-color: #080808;
