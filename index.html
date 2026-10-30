@@ -239,36 +239,18 @@ nav .logo {
         font-size: 36px;
     }
 
-    #services,
-    #contact {
-        padding: 45px 6%;
-    }
-
-    #services h2,
-    #contact h2 {
-        font-size: 30px;
-    }
-
-    .service-list {
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .service {
-        min-width: 0;
-    }
+  #services {
+    padding: 60px 8%;
 }
 
 .service-list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .service {
-    flex: 1;
-    min-width: 200px;
-    padding: 20px;
+    padding: 25px;
     background-color: #1f2937;
     border-radius: 12px;
     border: 1px solid #374151;
@@ -280,9 +262,24 @@ nav .logo {
     border-color: #3b82f6;
 }
 
-
 .service h3 {
     color: #3b82f6;
+}
+
+@media (max-width: 900px) {
+    .service-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    #services {
+        padding: 45px 6%;
+    }
+
+    .service-list {
+        grid-template-columns: 1fr;
+    }
 }
    #contact {
     padding: 60px 8%;
