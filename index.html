@@ -316,6 +316,71 @@ header nav {
     color: #bdbdbd;
     line-height: 1.7;
 }
+        /* Portfolio section */
+#portfolio {
+    padding: 70px 8%;
+    background-color: #111827;
+    border-top: 1px solid #292929;
+}
+
+#portfolio h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.portfolio-intro {
+    color: #bdbdbd;
+    margin-bottom: 35px;
+    line-height: 1.7;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.portfolio-card {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-5px);
+}
+
+.portfolio-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    display: block;
+}
+
+.portfolio-info {
+    padding: 20px;
+}
+
+.portfolio-info h3 {
+    color: #3b82f6;
+}
+
+.portfolio-info p {
+    color: #bdbdbd;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    #portfolio {
+        padding: 45px 6%;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
  </style>
 
 
@@ -339,8 +404,10 @@ header nav {
         <div id="nav-links">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
+            
         </div>
     </nav>
 </header>
@@ -401,6 +468,34 @@ header nav {
         <div class="service">
             <h3>Product Commercials</h3>
             <p>Creative product-focused videos designed to showcase features and capture attention.</p>
+        </div>
+
+    </div>
+</section>
+        <section id="portfolio">
+    <h2>My Featured Work</h2>
+
+    <p class="portfolio-intro">
+        A selection of creative video projects produced
+        by Maliq Digital Studio.
+    </p>
+
+    <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+            <iframe
+                src="https://drive.google.com/file/d/1m_pcjlQew-cpzuRQna6ihdBe4L9ylDyx/preview"
+                allow="autoplay"
+                allowfullscreen>
+            </iframe>
+
+            <div class="portfolio-info">
+                <h3>APEX GT — Born to Move</h3>
+                <p>
+                    A cinematic AI-generated automotive
+                    commercial showcasing the APEX GT.
+                </p>
+            </div>
         </div>
 
     </div>
